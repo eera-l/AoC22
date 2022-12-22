@@ -160,7 +160,8 @@ def task2(lines):
     for coord in coords:
         start_cell = Cell(None, coord[0], coord[1], ord('a'))
         paths.append(run_bfs(start_cell, end_cell, grid))
-    print(sorted(paths))
+    m_paths = [n for n in paths if n != 0]
+    print(min(m_paths))
 
 
 if __name__ == '__main__':
